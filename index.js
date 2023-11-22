@@ -117,7 +117,7 @@ async function dep() {
   try {
     let optionsArg = core.getInput('options')
     if (optionsArg !== '') {
-      for (let [key, value] in Object.entries(JSON.parse(optionsArg))) {
+      for (let [key, value] of Object.entries(JSON.parse(optionsArg))) {
         options.push('-o', `${key}=${value}`)
       }
     }
